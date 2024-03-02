@@ -127,6 +127,9 @@ namespace Projeto_Lista_de_Tarefas
 
         }
 
-      
+        private void panelAutoScrollMenu_Paint(object sender, PaintEventArgs e)
+        {
+            panelAutoScrollMenu.AutoScroll = true;
+        }
     }
 }

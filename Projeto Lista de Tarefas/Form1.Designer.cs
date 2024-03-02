@@ -43,7 +43,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(272, 86);
+            label1.Location = new Point(272, 89);
             label1.Name = "label1";
             label1.Size = new Size(74, 32);
             label1.TabIndex = 0;
@@ -102,7 +102,7 @@
             panel1.Controls.Add(maskedTextBoxSenha);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label3);
-            panel1.Location = new Point(164, 132);
+            panel1.Location = new Point(164, 135);
             panel1.Name = "panel1";
             panel1.Size = new Size(284, 158);
             panel1.TabIndex = 6;
