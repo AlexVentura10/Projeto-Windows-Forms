@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             botaoVerTarefas = new Button();
-            button3 = new Button();
+            botaoExluirLista = new Button();
             botaoSair = new Button();
             botaoAddTarefa = new Button();
             label4 = new Label();
@@ -81,19 +81,20 @@
             botaoVerTarefas.Name = "botaoVerTarefas";
             botaoVerTarefas.Size = new Size(101, 24);
             botaoVerTarefas.TabIndex = 3;
-            botaoVerTarefas.Text = "Ver tarefa";
+            botaoVerTarefas.Text = "Ver tarefas";
             botaoVerTarefas.UseVisualStyleBackColor = true;
             botaoVerTarefas.Click += botaoVerTarefas_Click;
             // 
-            // button3
+            // botaoExluirLista
             // 
-            button3.Font = new Font("Segoe UI", 9.75F);
-            button3.Location = new Point(41, 165);
-            button3.Name = "button3";
-            button3.Size = new Size(101, 24);
-            button3.TabIndex = 4;
-            button3.Text = "Excluir lista";
-            button3.UseVisualStyleBackColor = true;
+            botaoExluirLista.Font = new Font("Segoe UI", 9.75F);
+            botaoExluirLista.Location = new Point(41, 165);
+            botaoExluirLista.Name = "botaoExluirLista";
+            botaoExluirLista.Size = new Size(101, 24);
+            botaoExluirLista.TabIndex = 4;
+            botaoExluirLista.Text = "Excluir tarefas";
+            botaoExluirLista.UseVisualStyleBackColor = true;
+            botaoExluirLista.Click += botaoExluirLista_Click;
             // 
             // botaoSair
             // 
@@ -242,6 +243,7 @@
             listBoxTarefas.Name = "listBoxTarefas";
             listBoxTarefas.Size = new Size(459, 289);
             listBoxTarefas.TabIndex = 1;
+            listBoxTarefas.SelectedIndexChanged += listBoxTarefas_SelectedIndexChanged;
             // 
             // panelAutoScrollMenu
             // 
@@ -257,7 +259,7 @@
             panelAutoScrollMenu.Controls.Add(label4);
             panelAutoScrollMenu.Controls.Add(botaoAddTarefa);
             panelAutoScrollMenu.Controls.Add(botaoSair);
-            panelAutoScrollMenu.Controls.Add(button3);
+            panelAutoScrollMenu.Controls.Add(botaoExluirLista);
             panelAutoScrollMenu.Controls.Add(botaoVerTarefas);
             panelAutoScrollMenu.Location = new Point(1, 43);
             panelAutoScrollMenu.Name = "panelAutoScrollMenu";
@@ -288,7 +290,7 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(10, 261);
+            pictureBox7.Location = new Point(12, 266);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(25, 24);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -298,7 +300,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 9.75F);
-            button1.Location = new Point(41, 261);
+            button1.Location = new Point(43, 266);
             button1.Name = "button1";
             button1.Size = new Size(101, 24);
             button1.TabIndex = 16;
@@ -409,7 +411,7 @@
 
         #endregion
         private Button botaoVerTarefas;
-        private Button button3;
+        private Button botaoExluirLista;
         private Button botaoSair;
         private Button botaoAddTarefa;
         private Label label4;

@@ -103,6 +103,7 @@ namespace Projeto_Lista_de_Tarefas
 
             else
             {
+                panelMenuIncial.Visible = true;
                 flowLayoutPanelVerTarefas.Visible = false;
                 MessageBox.Show("Você não possui nenhuma tarefa", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -130,6 +131,32 @@ namespace Projeto_Lista_de_Tarefas
         private void panelAutoScrollMenu_Paint(object sender, PaintEventArgs e)
         {
             panelAutoScrollMenu.AutoScroll = true;
+        }
+
+
+
+        private void botaoExluirLista_Click(object sender, EventArgs e)
+        {
+
+            if (Tarefas.Count > 0)
+            {
+
+                if (MessageBox.Show("Deseja realmente excluir suas tarefas?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+                    Tarefas.Clear();
+                MessageBox.Show("Tarefas excluidas com sucesso", "Tarefas Exluidas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+            else
+            {
+                MessageBox.Show("Você não possui nenhuma tarefa", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void listBoxTarefas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
