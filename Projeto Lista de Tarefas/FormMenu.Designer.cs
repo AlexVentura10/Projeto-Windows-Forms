@@ -46,6 +46,7 @@
             flowLayoutPanelVerTarefas = new FlowLayoutPanel();
             label1 = new Label();
             listBoxTarefas = new ListBox();
+            pictureBox9 = new PictureBox();
             panelAutoScrollMenu = new Panel();
             pictureBox13 = new PictureBox();
             button7 = new Button();
@@ -63,6 +64,7 @@
             panelMenuIncial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             flowLayoutPanelVerTarefas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             panelAutoScrollMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -216,9 +218,10 @@
             // 
             // flowLayoutPanelVerTarefas
             // 
-            flowLayoutPanelVerTarefas.BackColor = Color.White;
+            flowLayoutPanelVerTarefas.BackColor = Color.Azure;
             flowLayoutPanelVerTarefas.Controls.Add(label1);
             flowLayoutPanelVerTarefas.Controls.Add(listBoxTarefas);
+            flowLayoutPanelVerTarefas.Controls.Add(pictureBox9);
             flowLayoutPanelVerTarefas.Location = new Point(196, 43);
             flowLayoutPanelVerTarefas.Name = "flowLayoutPanelVerTarefas";
             flowLayoutPanelVerTarefas.Size = new Size(473, 354);
@@ -228,22 +231,37 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(3, 0);
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(100, 2);
+            label1.Margin = new Padding(100, 2, 0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(90, 20);
+            label1.Size = new Size(130, 30);
             label1.TabIndex = 0;
             label1.Text = "Suas tarefas";
             // 
             // listBoxTarefas
             // 
+            listBoxTarefas.BackColor = Color.Azure;
             listBoxTarefas.FormattingEnabled = true;
             listBoxTarefas.ItemHeight = 15;
-            listBoxTarefas.Location = new Point(3, 23);
+            listBoxTarefas.Location = new Point(10, 42);
+            listBoxTarefas.Margin = new Padding(10);
             listBoxTarefas.Name = "listBoxTarefas";
-            listBoxTarefas.Size = new Size(459, 289);
+            listBoxTarefas.ScrollAlwaysVisible = true;
+            listBoxTarefas.Size = new Size(268, 304);
             listBoxTarefas.TabIndex = 1;
-            listBoxTarefas.SelectedIndexChanged += listBoxTarefas_SelectedIndexChanged;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Image = Properties.Resources._1567073;
+            pictureBox9.Location = new Point(298, 82);
+            pictureBox9.Margin = new Padding(10, 50, 10, 10);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(153, 134);
+            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox9.TabIndex = 2;
+            pictureBox9.TabStop = false;
             // 
             // panelAutoScrollMenu
             // 
@@ -263,7 +281,7 @@
             panelAutoScrollMenu.Controls.Add(botaoVerTarefas);
             panelAutoScrollMenu.Location = new Point(1, 43);
             panelAutoScrollMenu.Name = "panelAutoScrollMenu";
-            panelAutoScrollMenu.Size = new Size(185, 303);
+            panelAutoScrollMenu.Size = new Size(185, 305);
             panelAutoScrollMenu.TabIndex = 11;
             panelAutoScrollMenu.Paint += panelAutoScrollMenu_Paint;
             // 
@@ -304,7 +322,7 @@
             button1.Name = "button1";
             button1.Size = new Size(101, 24);
             button1.TabIndex = 16;
-            button1.Text = "Excluir lista";
+            button1.Text = "...";
             button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox8
@@ -395,6 +413,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             flowLayoutPanelVerTarefas.ResumeLayout(false);
             flowLayoutPanelVerTarefas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             panelAutoScrollMenu.ResumeLayout(false);
             panelAutoScrollMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
@@ -439,5 +458,6 @@
         private PictureBox pictureBox7;
         private Button button1;
         private Panel panelBusca;
+        private PictureBox pictureBox9;
     }
 }

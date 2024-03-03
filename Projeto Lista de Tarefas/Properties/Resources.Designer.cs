@@ -63,6 +63,16 @@ namespace Projeto_Lista_de_Tarefas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1567073 {
+            get {
+                object obj = ResourceManager.GetObject("1567073", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap listas_de_tarefas_significado_1024x576__1__removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("listas-de-tarefas-significado-1024x576__1_-removebg-preview", resourceCulture);

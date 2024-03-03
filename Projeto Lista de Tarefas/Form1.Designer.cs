@@ -78,6 +78,7 @@
             // 
             // maskedTextBoxSenha
             // 
+            maskedTextBoxSenha.HidePromptOnLeave = true;
             maskedTextBoxSenha.Location = new Point(88, 70);
             maskedTextBoxSenha.Name = "maskedTextBoxSenha";
             maskedTextBoxSenha.PasswordChar = '*';

@@ -42,7 +42,9 @@ namespace Projeto_Lista_de_Tarefas
 
                         else
                         {
+                            maskedTextBoxSenha.Clear(); 
                             MessageBox.Show("Senha incorreta", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                         }
 
                     }

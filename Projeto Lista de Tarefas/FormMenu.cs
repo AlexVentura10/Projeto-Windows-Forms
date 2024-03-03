@@ -58,7 +58,7 @@ namespace Projeto_Lista_de_Tarefas
 
 
 
-                Tarefa novaTarefa = new Tarefa()  // Cria uma nova instância da classe Tarefa com a descrição e a data
+                Tarefa novaTarefa = new Tarefa()  // Cria um objeto da classe Tarefa com "tarefaAdd" e a "Data"
                 {
                     tarefaAdd = tarefaAdd,
                     Data = dataTarefa
@@ -70,7 +70,7 @@ namespace Projeto_Lista_de_Tarefas
                 textBoxAddTarefa.Clear();
 
 
-                MessageBox.Show("Tarefa Adicionda com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Tarefa adicionda com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
@@ -92,7 +92,6 @@ namespace Projeto_Lista_de_Tarefas
 
             if (Tarefas.Count > 0)
             {
-
                 flowLayoutPanelVerTarefas.Visible = true;
                 panelAddTarefa.Visible = false;
                 panelMenuIncial.Visible = false;
@@ -144,7 +143,10 @@ namespace Projeto_Lista_de_Tarefas
                 if (MessageBox.Show("Deseja realmente excluir suas tarefas?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 
                     Tarefas.Clear();
-                MessageBox.Show("Tarefas excluidas com sucesso", "Tarefas Exluidas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                listBoxTarefas.Items.Clear();
+
+                MessageBox.Show("Tarefas excluidas com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
 
@@ -154,9 +156,6 @@ namespace Projeto_Lista_de_Tarefas
             }
         }
 
-        private void listBoxTarefas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+  
     }
 }
