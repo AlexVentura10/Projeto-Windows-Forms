@@ -41,12 +41,13 @@
             label3 = new Label();
             buttonAddTarefa = new Button();
             label2 = new Label();
-            panelMenuIncial = new Panel();
-            pictureBox2 = new PictureBox();
             flowLayoutPanelVerTarefas = new FlowLayoutPanel();
             label1 = new Label();
             listBoxTarefas = new ListBox();
             pictureBox9 = new PictureBox();
+            botaoExluirItem = new Button();
+            panelMenuIncial = new Panel();
+            pictureBox2 = new PictureBox();
             panelAutoScrollMenu = new Panel();
             pictureBox13 = new PictureBox();
             button7 = new Button();
@@ -61,10 +62,10 @@
             panelBusca = new Panel();
             panelAddTarefa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panelMenuIncial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             flowLayoutPanelVerTarefas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            panelMenuIncial.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelAutoScrollMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -197,6 +198,66 @@
             label2.TabIndex = 0;
             label2.Text = "Tarefa";
             // 
+            // flowLayoutPanelVerTarefas
+            // 
+            flowLayoutPanelVerTarefas.BackColor = Color.Azure;
+            flowLayoutPanelVerTarefas.Controls.Add(label1);
+            flowLayoutPanelVerTarefas.Controls.Add(listBoxTarefas);
+            flowLayoutPanelVerTarefas.Controls.Add(pictureBox9);
+            flowLayoutPanelVerTarefas.Controls.Add(botaoExluirItem);
+            flowLayoutPanelVerTarefas.Location = new Point(192, 36);
+            flowLayoutPanelVerTarefas.Name = "flowLayoutPanelVerTarefas";
+            flowLayoutPanelVerTarefas.Size = new Size(473, 354);
+            flowLayoutPanelVerTarefas.TabIndex = 10;
+            flowLayoutPanelVerTarefas.Visible = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(85, 3);
+            label1.Margin = new Padding(85, 3, 3, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(130, 30);
+            label1.TabIndex = 0;
+            label1.Text = "Suas tarefas";
+            // 
+            // listBoxTarefas
+            // 
+            listBoxTarefas.BackColor = Color.Azure;
+            listBoxTarefas.FormattingEnabled = true;
+            listBoxTarefas.ItemHeight = 15;
+            listBoxTarefas.Location = new Point(10, 43);
+            listBoxTarefas.Margin = new Padding(10);
+            listBoxTarefas.Name = "listBoxTarefas";
+            listBoxTarefas.ScrollAlwaysVisible = true;
+            listBoxTarefas.SelectionMode = SelectionMode.MultiExtended;
+            listBoxTarefas.Size = new Size(268, 274);
+            listBoxTarefas.TabIndex = 1;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Image = Properties.Resources._1567073;
+            pictureBox9.Location = new Point(298, 83);
+            pictureBox9.Margin = new Padding(10, 50, 10, 10);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(153, 134);
+            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox9.TabIndex = 2;
+            pictureBox9.TabStop = false;
+            // 
+            // botaoExluirItem
+            // 
+            botaoExluirItem.Location = new Point(100, 328);
+            botaoExluirItem.Margin = new Padding(100, 1, 3, 3);
+            botaoExluirItem.Name = "botaoExluirItem";
+            botaoExluirItem.Size = new Size(74, 23);
+            botaoExluirItem.TabIndex = 3;
+            botaoExluirItem.Text = "Excluir";
+            botaoExluirItem.UseVisualStyleBackColor = true;
+            botaoExluirItem.Click += botaoExluirItem_Click;
+            // 
             // panelMenuIncial
             // 
             panelMenuIncial.Controls.Add(pictureBox2);
@@ -216,53 +277,6 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
-            // flowLayoutPanelVerTarefas
-            // 
-            flowLayoutPanelVerTarefas.BackColor = Color.Azure;
-            flowLayoutPanelVerTarefas.Controls.Add(label1);
-            flowLayoutPanelVerTarefas.Controls.Add(listBoxTarefas);
-            flowLayoutPanelVerTarefas.Controls.Add(pictureBox9);
-            flowLayoutPanelVerTarefas.Location = new Point(196, 43);
-            flowLayoutPanelVerTarefas.Name = "flowLayoutPanelVerTarefas";
-            flowLayoutPanelVerTarefas.Size = new Size(473, 354);
-            flowLayoutPanelVerTarefas.TabIndex = 10;
-            flowLayoutPanelVerTarefas.Visible = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(100, 2);
-            label1.Margin = new Padding(100, 2, 0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(130, 30);
-            label1.TabIndex = 0;
-            label1.Text = "Suas tarefas";
-            // 
-            // listBoxTarefas
-            // 
-            listBoxTarefas.BackColor = Color.Azure;
-            listBoxTarefas.FormattingEnabled = true;
-            listBoxTarefas.ItemHeight = 15;
-            listBoxTarefas.Location = new Point(10, 42);
-            listBoxTarefas.Margin = new Padding(10);
-            listBoxTarefas.Name = "listBoxTarefas";
-            listBoxTarefas.ScrollAlwaysVisible = true;
-            listBoxTarefas.Size = new Size(268, 304);
-            listBoxTarefas.TabIndex = 1;
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.Image = Properties.Resources._1567073;
-            pictureBox9.Location = new Point(298, 82);
-            pictureBox9.Margin = new Padding(10, 50, 10, 10);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(153, 134);
-            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox9.TabIndex = 2;
-            pictureBox9.TabStop = false;
-            // 
             // panelAutoScrollMenu
             // 
             panelAutoScrollMenu.BackColor = Color.Azure;
@@ -281,14 +295,14 @@
             panelAutoScrollMenu.Controls.Add(botaoVerTarefas);
             panelAutoScrollMenu.Location = new Point(1, 43);
             panelAutoScrollMenu.Name = "panelAutoScrollMenu";
-            panelAutoScrollMenu.Size = new Size(185, 305);
+            panelAutoScrollMenu.Size = new Size(185, 310);
             panelAutoScrollMenu.TabIndex = 11;
             panelAutoScrollMenu.Paint += panelAutoScrollMenu_Paint;
             // 
             // pictureBox13
             // 
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(10, 306);
+            pictureBox13.Location = new Point(12, 310);
             pictureBox13.Name = "pictureBox13";
             pictureBox13.Size = new Size(25, 24);
             pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -298,7 +312,7 @@
             // button7
             // 
             button7.Font = new Font("Segoe UI", 9.75F);
-            button7.Location = new Point(41, 306);
+            button7.Location = new Point(43, 310);
             button7.Name = "button7";
             button7.Size = new Size(101, 24);
             button7.TabIndex = 26;
@@ -409,11 +423,11 @@
             panelAddTarefa.ResumeLayout(false);
             panelAddTarefa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panelMenuIncial.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             flowLayoutPanelVerTarefas.ResumeLayout(false);
             flowLayoutPanelVerTarefas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            panelMenuIncial.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panelAutoScrollMenu.ResumeLayout(false);
             panelAutoScrollMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
@@ -459,5 +473,6 @@
         private Button button1;
         private Panel panelBusca;
         private PictureBox pictureBox9;
+        private Button botaoExluirItem;
     }
 }
